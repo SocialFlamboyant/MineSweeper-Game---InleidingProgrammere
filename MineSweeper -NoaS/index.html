@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+         <!-- Spelregels popup -->
+    <button id="rules-button">Spelregels</button>
+    <div id="rules-popup" class="hidden">
+        <h2>Spelregels</h2>
+        <p>1. Klik op de tegels om te onthullen wat eronder zit.</p>
+        <p>2. Gebruik de "✖️"-knop om een tegel te markeren als je denkt dat er een mijn is.</p>
+        <p>3. Vermijd mijnen. <A></A>ls je er één raakt, verlies je het spel!</p>
+        <p>4. Win het spel door alle veilige tegels te onthullen.</p>
+        <button id="close-rules">✖️</button>
+    </div>
+
+    <div id="mines-container">
+        <h1>Mines: <span id="mines-count">0</span></h1>
+    </div>
+
+    <div id="board"></div>
+    <br>
+    <button id="flag-button">✖️</button>
+
+    <div id="bombs-container">
+        <label for="bombs-select">Aantal Bommen:</label>
+        <select id="bombs-select">
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10" selected>10</option>
+        </select>
+    </div>
+
+    <!-- Audio Track -->
+    <audio id="explosion-sound" src="sounds/explosion.mp3"></audio>
+
+    <!-- Win/Loss Popup -->
+    <div id="popup" class="hidden">
+        <p id="popup-message"></p>
+        <button id="popup-reset">Reset</button>
+    </div>
+<script src="script/script.js"></script>
+</body>
+</html>
